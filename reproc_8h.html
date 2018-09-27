@@ -142,8 +142,6 @@ Variables</h2></td></tr>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="reproc_8h_source.html#l00045">45</a> of file <a class="el" href="reproc_8h_source.html">reproc.h</a>.</p>
-
 </div>
 </div>
 <a id="ad85b12c1b2b5675ff9e863ccb49e336c"></a>
@@ -160,15 +158,13 @@ Variables</h2></td></tr>
 <p>Contains flags used to tell reproc how to stop a child process.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="reproc_8h.html#a1c60248455f71038e9006092fbfe08de">reproc_stop</a> </dd></dl>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad85b12c1b2b5675ff9e863ccb49e336ca78566ff8a1ae2758d2fea0f94b44f43f"></a>REPROC_WAIT&#160;</td><td class="fielddoc"><p>Wait for the child process to exit on its own </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad85b12c1b2b5675ff9e863ccb49e336ca78566ff8a1ae2758d2fea0f94b44f43f"></a>REPROC_WAIT&#160;</td><td class="fielddoc"><p>Wait for the child process to exit on its own. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="ad85b12c1b2b5675ff9e863ccb49e336ca7f02026d64dcd9b0f1af33b1fddaf2fb"></a>REPROC_TERMINATE&#160;</td><td class="fielddoc"><p>Send <code>SIGTERM</code> (POSIX) or <code>CTRL-BREAK</code> (Windows) and wait for the child process to exit </p>
+<tr><td class="fieldname"><a id="ad85b12c1b2b5675ff9e863ccb49e336ca7f02026d64dcd9b0f1af33b1fddaf2fb"></a>REPROC_TERMINATE&#160;</td><td class="fielddoc"><p>Send <code>SIGTERM</code> (POSIX) or <code>CTRL-BREAK</code> (Windows) and wait for the child process to exit. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="ad85b12c1b2b5675ff9e863ccb49e336ca12979aa7ff3873d42d5e6948876ff1ff"></a>REPROC_KILL&#160;</td><td class="fielddoc"><p>Send <code>SIGKILL</code> (POSIX) or call <code>TerminateProcess</code> (Windows) and wait for the child process to exit. Because <code>SIGKILL</code> and <code>TerminateProcess</code> do not allow the child process to clean up its resources this flag should only be used if the <a class="el" href="reproc_8h.html#ad85b12c1b2b5675ff9e863ccb49e336ca7f02026d64dcd9b0f1af33b1fddaf2fb">REPROC_TERMINATE</a> flag is not sufficient to stop a child process. </p>
 </td></tr>
 </table>
-
-<p class="definition">Definition at line <a class="el" href="reproc_8h_source.html#l00059">59</a> of file <a class="el" href="reproc_8h_source.html">reproc.h</a>.</p>
 
 </div>
 </div>
@@ -227,7 +223,7 @@ Variables</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td><p class="starttd">Specifies the amount of elements in <code>argv</code>. Should NOT include the <code>NULL</code> value at the end of the array. Must be bigger than or equal to 1.</p>
 <p class="endtd">Example: if argv is ["cmake", "--help", <code>NULL</code>] then <code>argc</code> is 2. </p>
 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">working_directory</td><td>Indicates the working directory for the child process. If it is <code>NULL</code>, the child process runs in the same directory as the current process.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">working_directory</td><td>Indicates the working directory for the child. process. If it is <code>NULL</code>, the child process runs in the same directory as the current process.</td></tr>
   </table>
   </dd>
 </dl>
@@ -468,12 +464,12 @@ Variables</h2></td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">exit_status</td><td><p class="starttd">Optional output parameter used to store the exit status of the child process.</p>
 <p>If the child process exits normally the exit status of the child process is stored in <code>exit_status</code>.</p>
 <p>Exiting normally is defined as follows for the different platforms:</p><ul>
-<li>POSIX: The process returned from its main function or called <code>exit</code> or <code>_exit</code></li>
-<li>Windows: The process returned from its <code>main</code> or <code>WinMain</code> function</li>
+<li>POSIX: The process returned from its main function or called <code>exit</code> or <code>_exit</code>.</li>
+<li>Windows: The process returned from its <code>main</code> or <code>WinMain</code> function.</li>
 </ul>
 <p class="endtd">If the function does not exit normally the following values are stored in <code>exit_status:</code> </p><ul>
-<li>POSIX: Number of the signal that terminated the child process</li>
-<li>Windows: exit status passed to <code>ExitProcess</code> or <code>TerminateProcess</code> function call that terminated the child process </li>
+<li>POSIX: Number of the signal that terminated the child process.</li>
+<li>Windows: exit status passed to <code>ExitProcess</code> or <code>TerminateProcess</code> function call that terminated the child process. </li>
 </ul>
 </td></tr>
   </table>

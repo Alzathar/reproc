@@ -113,9 +113,7 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Improves on reproc's C API by wrapping it in a class. Aside from methods that mimick the C API it also adds configurable RAII and several methods that reduce the boilerplate required when using reproc from idiomatic C++ code. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="cmake-help_8cpp-example.html#_a3">cmake-help.cpp</a>, and <a class="el" href="forward_8cpp-example.html#_a3">forward.cpp</a>.</dd>
-</dl>
-<p class="definition">Definition at line <a class="el" href="reproc_8hpp_source.html#l00051">51</a> of file <a class="el" href="reproc_8hpp_source.html">reproc.hpp</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ad4148fe6eca232452c5ee1e5bd8ed349"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4148fe6eca232452c5ee1e5bd8ed349">&#9670;&nbsp;</a></span>process()</h2>
 
@@ -416,15 +414,13 @@ template&lt;typename Parser &gt; </div>
 </dl>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">stream</td><td>Stream to read from </td></tr>
-    <tr><td class="paramname">parser</td><td>Instance of <code>Parser</code> </td></tr>
+    <tr><td class="paramname">stream</td><td>The stream to read from. </td></tr>
+    <tr><td class="paramname">parser</td><td>An instance of <code>Parser</code>.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="namespacereproc.html#add108cd36503e8c00669915c11ed9fa2">reproc::errc</a></dd></dl>
-<p>Possible errors: See <a class="el" href="classreproc_1_1process.html#a43f9d27e21e8ce14b9ab5760ebd15761">read</a> except for <a class="el" href="namespacereproc.html#add108cd36503e8c00669915c11ed9fa2abbe399df54da61817971f51c73409303">reproc::errc::stream_closed</a> </p>
-
-<p class="definition">Definition at line <a class="el" href="reproc_8hpp_source.html#l00177">177</a> of file <a class="el" href="reproc_8hpp_source.html">reproc.hpp</a>.</p>
+<p>Possible errors: See <a class="el" href="classreproc_1_1process.html#a43f9d27e21e8ce14b9ab5760ebd15761">read</a> except for <a class="el" href="namespacereproc.html#add108cd36503e8c00669915c11ed9fa2abbe399df54da61817971f51c73409303">reproc::errc::stream_closed</a>. </p>
 
 </div>
 </div>
